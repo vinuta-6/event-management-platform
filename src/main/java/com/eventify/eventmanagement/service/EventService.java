@@ -1,10 +1,8 @@
 package com.eventify.eventmanagement.service;
 
-import com.eventify.eventmanagement.dto.request.EventRequestDTO;
-import com.eventify.eventmanagement.entity.Event;
-
+import com.eventify.eventmanagement.dto.request.EventRequestDto;
 
 public interface EventService {
 
-    void createEvent(EventRequestDTO event);
+  void createEvent(EventRequestDto event);
 }

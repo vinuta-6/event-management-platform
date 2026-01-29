@@ -18,5 +18,4 @@ public class Event {
     private LocalDate eventDate;
     private String location;
     private Integer guestCount;
-
 }

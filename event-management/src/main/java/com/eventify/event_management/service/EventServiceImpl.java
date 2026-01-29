@@ -1,6 +1,6 @@
 package com.eventify.event_management.service;
 
-import com.eventify.event_management.event.Event;
+import com.eventify.event_management.entity.Event;
 import com.eventify.event_management.repository.EventRepository;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.eventify.event_management.event;
+package com.eventify.event_management.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,9 +6,10 @@ import lombok.Data;
 import java.time.LocalDate;
 
 
-@Entity
+
 @Data
 @Table(name = "events")
+@Entity
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,7 +1,7 @@
 package com.eventify.event_management.controller;
 
 
-import com.eventify.event_management.event.Event;
+import com.eventify.event_management.entity.Event;
 
 import com.eventify.event_management.service.EventService;
 import org.springframework.web.bind.annotation.*;

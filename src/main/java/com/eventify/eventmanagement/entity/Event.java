@@ -1,4 +1,4 @@
-package com.eventify.event_management.entity;
+package com.eventify.eventmanagement.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

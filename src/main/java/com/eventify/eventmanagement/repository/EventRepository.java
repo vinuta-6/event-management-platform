@@ -1,6 +1,6 @@
-package com.eventify.event_management.repository;
+package com.eventify.eventmanagement.repository;
 
-import com.eventify.event_management.entity.Event;
+import com.eventify.eventmanagement.entity.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,0 +1,16 @@
+# Server
+server:
+  port: 8080
+
+# PostgreSQL Config
+spring:
+  application:
+    name: event-management
+  datasource:
+    url: jdbc:postgresql://localhost:5432/event_management_db
+    username: postgres
+    password: root
+
+  # JPA Config
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

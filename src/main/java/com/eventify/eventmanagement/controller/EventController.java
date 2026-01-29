@@ -1,9 +1,9 @@
-package com.eventify.event_management.controller;
+package com.eventify.eventmanagement.controller;
 
 
-import com.eventify.event_management.entity.Event;
+import com.eventify.eventmanagement.entity.Event;
 
-import com.eventify.event_management.service.EventService;
+import com.eventify.eventmanagement.service.EventService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

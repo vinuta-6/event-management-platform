@@ -1,4 +1,4 @@
-package com.eventify.event_management;
+package com.eventify.eventmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

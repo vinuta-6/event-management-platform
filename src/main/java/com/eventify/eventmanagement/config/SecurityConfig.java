@@ -1,4 +1,4 @@
-package com.eventify.event_management.config;
+package com.eventify.eventmanagement.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,0 +1,27 @@
+package com.eventify.eventmanagement.controller;
+
+import com.eventify.eventmanagement.dto.request.EventRequestDto;
+import com.eventify.eventmanagement.service.EventService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/events")
+public class EventController {
+
+  private final EventService eventService;
+
+  public EventController(EventService eventService) {
+    this.eventService = eventService;
+  }
+
+  @PostMapping
+  public ResponseEntity<Void> createEvent(@RequestBody EventRequestDto eventRequest) {
+    eventService.createEvent(eventRequest);
+    return new ResponseEntity<>(HttpStatus.OK);
+  }
+}

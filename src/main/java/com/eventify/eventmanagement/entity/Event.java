@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
+import java.util.List;
 import lombok.Data;
 
 @Data
@@ -20,4 +21,8 @@ public class Event {
   private LocalDate eventDate;
   private String location;
   private Integer guestCount;
+  private String venue;
+  private Double ratings;
+  private Integer budget;
+  private List<String> Services;
 }

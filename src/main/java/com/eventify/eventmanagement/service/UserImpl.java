@@ -1,5 +1,6 @@
 package com.eventify.eventmanagement.service;
 
+import com.eventify.eventmanagement.dto.request.UserRequestDto;
 import com.eventify.eventmanagement.entity.User;
 import com.eventify.eventmanagement.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -14,13 +15,18 @@ public class UserImpl implements UserService {
   }
 
   @Override
-  public User register(User user) {
+  public void register(UserRequestDto dto) {
 
-    if (userRepository.existsByEmail(user.getEmail())) {
+    if (userRepository.existsByEmail(dto.getEmail())) {
       throw new RuntimeException("Email already exists");
     }
 
-    return userRepository.save(user);
+    User user = new User();
+    user.setName(dto.getName());
+    user.setEmail(dto.getEmail());
+    user.setPassword(dto.getPassword());
+
+    userRepository.save(user);
   }
 
   @Override

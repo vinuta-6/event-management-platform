@@ -2,6 +2,7 @@ package com.eventify.eventmanagement.controller;
 
 import com.eventify.eventmanagement.dto.request.EventRequestDto;
 import com.eventify.eventmanagement.entity.Event;
+import com.eventify.eventmanagement.entity.EventType;
 import com.eventify.eventmanagement.service.EventService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -21,6 +23,7 @@ public class EventController {
   private final EventService eventService;
 
   public EventController(EventService eventService) {
+
     this.eventService = eventService;
   }
 
@@ -31,8 +34,10 @@ public class EventController {
   }
 
   @GetMapping
-  public ResponseEntity<List<Event>> getAllEvents() {
-    return ResponseEntity.ok(eventService.getAllEvents());
+  public ResponseEntity<List<Event>> getAllEvents(
+      @RequestParam(required = false) EventType eventType) {
+
+    return ResponseEntity.ok(eventService.getAllEvents(eventType));
   }
 
   @GetMapping("/{id}")

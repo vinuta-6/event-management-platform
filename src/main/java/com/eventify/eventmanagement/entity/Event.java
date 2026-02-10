@@ -1,6 +1,8 @@
 package com.eventify.eventmanagement.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,7 +19,9 @@ public class Event {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String eventType;
+  @Enumerated(EnumType.STRING)
+  private EventType eventType;
+
   private LocalDate eventDate;
   private String location;
   private Integer guestCount;
